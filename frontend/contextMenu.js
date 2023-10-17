@@ -6,7 +6,9 @@ chrome.contextMenus.create({
   contexts: ["all"]
 });
 
+
 function copyToClipboard(text) { 
+// Function for copying the contents of the cover letter to your clipboard
   let textarea = document.createElement("textarea");
   textarea.value = text;
  
@@ -45,7 +47,7 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
         console.log(chrome.runtime.lastError);
         return;
       }
-      console.log(result[0])
+
       const res = await fetch("http://127.0.0.1:5000/read_page", {
         method: "POST",
         mode: "no-cors",
