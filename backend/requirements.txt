@@ -1,0 +1,7 @@
+opencv-python==4.8.0.76
+pytesseract==0.3.10
+Flask==2.0.1
+Flask-CORS==3.0.10
+Werkzeug==2.2.2
+python-dotenv==1.0.0
+requests==2.31.0

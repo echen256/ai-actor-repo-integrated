@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "AI Actor Extension",
+  "version": "1.0",
+  "description": "This is an AI actor extension!",
+   "permissions": [
+    "contextMenus" ,"scripting",  "activeTab", "clipboardWrite", "clipboardRead"
+  ], 
+  "host_permissions": [
+    "http://localhost:5000/*", "http://127.0.0.1:5000/*"
+  ],
+  "action": { 
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "background": {
+    "service_worker": "contextMenu.js"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' http://127.0.0.1:5000; object-src 'self';"
+  }
+}
